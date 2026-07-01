@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<meta name="theme-color" content="#0E3A5B">
+<title>Dra. Jeremy Moreno — Medicina Deportiva de Precisión | Panamá</title>
+<meta name="description" content="Medicina deportiva de precisión: composición corporal, optimización hormonal, nutrición inteligente y protocolos personalizados respaldados por evidencia científica. Dra. Jeremy Moreno · PowerClub Brisas del Golf, Panamá.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* ─── RESET ─── */
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+img{display:block;max-width:100%;height:auto}
+
+/* ─── VARIABLES ─── */
+:root{
+  --blue:#0E3A5B;
+  --blue-d:#092B44;
+  --blue-l:#E7EEF2;
+  --turq:#16C4B5;
+  --turq-l:#E3F7F5;
+  --emerald:#12A76A;
+  --emerald-d:#0E8557;
+  --graphite:#2B2B2B;
+  --white:#FFFFFF;
+  --gray:#F5F7F8;
+  --mut:#5C6B76;
+  --line:#E3E8EB;
+  --head:'Space Grotesk',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+  --sans:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
+}
+
+/* ─── BASE ─── */
+body{font-family:var(--sans);background:var(--white);color:var(--graphite);overflow-x:hidden;font-size:16px;line-height:1.6;font-weight:400}
+.wrap{max-width:1120px;margin:0 auto}
+
+/* ─── NAV ─── */
+nav{
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  display:flex;justify-content:space-between;align-items:center;
+  padding:1rem 1.3rem;
+  background:rgba(255,255,255,0.92);
+  backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--line);
+  transition:box-shadow .3s ease;
+}
+.nav-logo{font-family:var(--head);font-weight:600;font-size:1rem;color:var(--blue);letter-spacing:0.2px;text-decoration:none;line-height:1.15}
+.nav-logo small{display:block;font-family:var(--sans);font-weight:500;font-size:0.6rem;letter-spacing:2.5px;text-transform:uppercase;color:var(--mut);margin-top:2px}
+.nav-cta{
+  font-size:0.68rem;letter-spacing:1px;text-transform:uppercase;font-weight:700;
+  color:#fff;text-decoration:none;background:var(--emerald);
+  padding:0.6rem 1.05rem;border-radius:50px;white-space:nowrap;
+  display:inline-flex;align-items:center;gap:0.4rem;
+}
+
+/* ─── ICONS (inline svg, stroke-based, no clip-art) ─── */
+.ic{width:20px;height:20px;flex-shrink:0}
+.ic svg{width:100%;height:100%}
+
+/* ─── HERO ─── */
+.hero{
+  min-height:100svh;position:relative;overflow:hidden;
+  padding:6.5rem 1.4rem 3rem;
+  display:flex;flex-direction:column;align-items:center;text-align:center;justify-content:center;
+  background:
+    radial-gradient(900px 500px at 85% -10%,rgba(22,196,181,0.12),transparent 60%),
+    radial-gradient(700px 500px at -10% 100%,rgba(14,58,91,0.06),transparent 60%),
+    var(--white);
+}
+.eyebrow{font-size:0.68rem;letter-spacing:4px;text-transform:uppercase;color:var(--turq);font-weight:700;margin-bottom:1.1rem;display:block}
+.hero h1{font-family:var(--head);font-weight:600;font-size:clamp(2.1rem,8vw,3.6rem);line-height:1.12;color:var(--blue);margin-bottom:1rem;letter-spacing:-0.5px}
+.hero h1 em{font-style:normal;color:var(--turq)}
+.divider{width:50px;height:2px;background:var(--turq);margin:0 auto 1.4rem;border:none}
+.hero-sub{font-size:1rem;line-height:1.7;color:var(--mut);max-width:460px;margin:0 auto 2.2rem;font-weight:400}
+.hero-photo-wrap{position:relative;margin:0 auto 2rem;width:min(240px,62vw)}
+.hero-photo{
+  width:100%;aspect-ratio:3/4;object-fit:cover;object-position:center 15%;
+  border-radius:54% 46% 44% 56% / 50% 54% 46% 50%;
+  box-shadow:0 24px 50px rgba(14,58,91,0.22);
+}
+.hero-badge{
+  position:absolute;bottom:-14px;right:-14px;
+  background:#fff;padding:0.7rem 1rem;border-radius:10px;
+  border-left:3px solid var(--turq);
+  box-shadow:0 10px 26px rgba(14,58,91,0.16);
+  text-align:left;
+}
+.badge-name{font-family:var(--head);font-weight:600;font-size:0.85rem;color:var(--blue)}
+.badge-role{font-size:0.6rem;color:var(--mut);letter-spacing:0.5px;margin-top:0.15rem}
+.hero-btns{display:flex;flex-direction:column;gap:0.8rem;width:100%;max-width:320px;margin:0 auto}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:0.5rem;text-align:center;text-decoration:none;
+  font-size:0.76rem;letter-spacing:1.5px;text-transform:uppercase;padding:1rem 1.4rem;font-weight:700;
+  border:none;cursor:pointer;border-radius:50px;transition:transform .2s ease,opacity .2s ease}
+.btn:hover{transform:translateY(-2px)}
+.btn-p{background:var(--emerald);color:#fff}
+.btn-o{border:1.5px solid var(--blue);color:var(--blue);background:transparent}
+.hero-stats{display:flex;gap:2rem;justify-content:center;margin-top:2.6rem;flex-wrap:wrap}
+.hstat .n{font-family:var(--head);font-weight:700;font-size:1.6rem;color:var(--blue)}
+.hstat .l{font-size:0.6rem;letter-spacing:2px;text-transform:uppercase;color:var(--mut);margin-top:2px}
+
+/* ─── QUOTE / STATEMENT ─── */
+.quote{background:var(--blue);padding:3.2rem 1.5rem;text-align:center}
+.quote p{font-family:var(--head);font-weight:500;font-size:clamp(1.15rem,4vw,1.7rem);color:#fff;max-width:680px;margin:0 auto;line-height:1.45}
+.quote .attr{color:var(--turq);font-size:0.68rem;letter-spacing:3px;text-transform:uppercase;margin-top:1.2rem;font-weight:700}
+
+/* ─── SECTIONS ─── */
+.sec{padding:4rem 1.4rem}
+.sec-gray{background:var(--gray)}
+.sec-head{max-width:640px;margin:0 auto 0.5rem;text-align:center}
+.sec-head .eyebrow{margin-bottom:0.8rem}
+.sec-title{font-family:var(--head);font-weight:600;font-size:clamp(1.6rem,5vw,2.3rem);line-height:1.2;color:var(--blue);letter-spacing:-0.3px}
+.sec-lead{font-size:0.95rem;line-height:1.75;color:var(--mut);font-weight:400;margin-top:0.9rem}
+
+/* ─── ABOUT ─── */
+.about{display:flex;flex-direction:column;gap:2.2rem}
+.about-photo{border-radius:16px;overflow:hidden;aspect-ratio:16/11;position:relative}
+.about-photo img{width:100%;height:100%;object-fit:cover;object-position:top center}
+.creds{display:flex;flex-direction:column;gap:1.1rem;margin-top:1.5rem}
+.cred{display:flex;gap:1rem;align-items:flex-start}
+.cred-ic{width:42px;height:42px;min-width:42px;border-radius:10px;display:flex;align-items:center;justify-content:center;
+  background:var(--turq-l);color:var(--blue)}
+.cred h4{font-family:var(--head);font-weight:600;font-size:0.96rem;margin-bottom:0.2rem;color:var(--graphite)}
+.cred p{font-size:0.83rem;color:var(--mut);line-height:1.5}
+
+/* ─── PILARES ─── */
+.pilares-grid{display:grid;grid-template-columns:1fr;gap:1rem;margin-top:2.2rem}
+.pilar{background:#fff;border:1px solid var(--line);border-radius:14px;padding:1.5rem}
+.pilar-ic{width:38px;height:38px;border-radius:9px;background:var(--blue-l);color:var(--blue);display:flex;align-items:center;justify-content:center;margin-bottom:0.9rem}
+.pilar h4{font-family:var(--head);font-weight:600;font-size:1rem;margin-bottom:0.4rem;color:var(--blue)}
+.pilar p{font-size:0.84rem;color:var(--mut);line-height:1.6}
+
+/* ─── EDU CARDS ─── */
+.edu-grid{display:grid;grid-template-columns:1fr;gap:1rem;margin-top:2rem}
+.edu-card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:1.6rem}
+.edu-num{font-family:var(--head);font-weight:700;font-size:0.78rem;color:var(--turq);letter-spacing:1px;margin-bottom:0.7rem}
+.edu-card h4{font-family:var(--head);font-weight:600;font-size:1.05rem;margin-bottom:0.5rem;color:var(--blue)}
+.edu-card p{font-size:0.86rem;color:var(--mut);line-height:1.65}
+
+/* ─── PROCESS ─── */
+.steps{display:grid;grid-template-columns:1fr;gap:1rem;margin-top:2.2rem;counter-reset:s}
+.step{background:#fff;border:1px solid var(--line);border-radius:14px;padding:1.5rem 1.4rem 1.5rem 4rem;position:relative}
+.step::before{counter-increment:s;content:counter(s,decimal-leading-zero);position:absolute;left:1.3rem;top:1.45rem;
+  font-family:var(--head);font-size:1.2rem;font-weight:700;color:var(--turq)}
+.step h4{font-family:var(--head);font-weight:600;font-size:1.02rem;margin-bottom:0.3rem;color:var(--blue)}
+.step p{font-size:0.85rem;color:var(--mut);line-height:1.6}
+.proceso-photo{margin-top:2.4rem;border-radius:16px;overflow:hidden;max-width:420px;margin-left:auto;margin-right:auto;aspect-ratio:4/3}
+.proceso-photo img{width:100%;height:100%;object-fit:cover;object-position:top center}
+
+/* ─── PEPTIDE GUIDE ─── */
+.cat-block{margin-top:2.6rem}
+.cat-label{display:flex;align-items:center;gap:0.8rem;margin-bottom:1.1rem}
+.cat-label .bar{height:1px;flex:1;background:var(--line)}
+.cat-label h3{font-family:var(--head);font-weight:600;font-size:0.72rem;letter-spacing:2.5px;text-transform:uppercase;color:var(--blue);white-space:nowrap}
+.pep-grid{display:grid;grid-template-columns:1fr;gap:1rem}
+.pep{background:#fff;border:1px solid var(--line);border-radius:14px;padding:1.4rem;position:relative;overflow:hidden;
+  display:flex;flex-direction:column;transition:transform .2s ease,border-color .2s ease,box-shadow .2s ease}
+.pep:hover{transform:translateY(-3px);border-color:var(--turq);box-shadow:0 14px 30px rgba(14,58,91,0.08)}
+.pep-top{display:flex;justify-content:space-between;align-items:flex-start;gap:0.6rem;margin-bottom:0.6rem}
+.pep-num{font-family:var(--head);font-weight:700;font-size:0.82rem;color:var(--line)}
+.pep-cat{font-size:0.56rem;letter-spacing:0.8px;text-transform:uppercase;font-weight:700;color:var(--blue);background:var(--blue-l);padding:3px 8px;border-radius:20px;white-space:nowrap}
+.pep h4{font-family:var(--head);font-weight:600;font-size:1.22rem;line-height:1.15;color:var(--blue)}
+.pep .alias{font-size:0.73rem;color:var(--mut);margin-bottom:0.7rem;margin-top:0.2rem}
+.pep .desc{font-size:0.85rem;color:var(--graphite);margin-bottom:0.6rem;line-height:1.55}
+.pep .vis{font-size:0.8rem;color:var(--mut);margin-bottom:1rem;line-height:1.55}
+.pep .vis b{color:var(--emerald-d);font-weight:600}
+.pep .foot{margin-top:auto;display:flex;align-items:center;justify-content:space-between;gap:0.6rem;flex-wrap:wrap}
+.pep-note{font-size:0.66rem;color:var(--mut);font-style:italic}
+.pep-wa{display:inline-flex;align-items:center;gap:0.35rem;background:var(--emerald);color:#fff;text-decoration:none;
+  font-size:0.64rem;letter-spacing:0.6px;text-transform:uppercase;font-weight:700;padding:0.55rem 0.85rem;border-radius:50px;white-space:nowrap}
+
+/* ─── DISCLAIMER ─── */
+.disc{background:var(--blue-l);border-radius:14px;padding:1.4rem 1.5rem;margin-top:2.4rem;max-width:760px;margin-left:auto;margin-right:auto}
+.disc p{font-size:0.82rem;color:var(--blue);line-height:1.65}
+.disc b{font-weight:700}
+
+/* ─── CONTACT ─── */
+.contact{background:linear-gradient(155deg,var(--blue) 0%,#0a2c47 100%);padding:4.2rem 1.4rem;text-align:center}
+.contact .eyebrow{color:var(--turq)}
+.contact .sec-title{color:#fff}
+.contact .sec-lead{color:rgba(255,255,255,0.72)}
+.c-blocks{display:flex;flex-direction:column;gap:1.1rem;margin:2.2rem auto;max-width:520px}
+.c-block{display:block;text-align:center;text-decoration:none;color:inherit;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.14);border-radius:14px;padding:1.3rem;transition:transform .2s ease,border-color .2s ease}
+.c-block:hover{transform:translateY(-2px);border-color:var(--turq)}
+.c-block .ic{margin:0 auto 0.5rem;color:var(--turq)}
+.c-block .lab{font-size:0.6rem;letter-spacing:2.5px;text-transform:uppercase;color:rgba(255,255,255,0.55);margin-bottom:0.3rem}
+.c-block .val{font-family:var(--head);font-weight:600;font-size:clamp(0.88rem,2.6vw,1.1rem);color:#fff;overflow-wrap:break-word;word-break:break-word;line-height:1.3}
+.c-block .sub{font-size:0.78rem;color:rgba(255,255,255,0.6);margin-top:0.2rem}
+.c-note{font-size:0.84rem;color:rgba(255,255,255,0.65);font-style:italic;margin-top:1.6rem}
+
+/* ─── FOOTER ─── */
+footer{background:#081c2c;color:rgba(255,255,255,0.5);text-align:center;padding:2.2rem 1.4rem;font-size:0.75rem;letter-spacing:0.4px}
+.foot-logo{font-family:var(--head);font-weight:600;font-size:1.15rem;color:#fff;margin-bottom:0.5rem;letter-spacing:0.5px}
+
+/* ─── WHATSAPP FLOAT ─── */
+.wa-float{position:fixed;bottom:22px;right:22px;z-index:999;width:58px;height:58px;border-radius:50%;
+  background:var(--emerald);color:#fff;display:flex;align-items:center;justify-content:center;
+  text-decoration:none;box-shadow:0 8px 24px rgba(18,167,106,.4);animation:wa-pulse 2.6s infinite}
+.wa-float svg{width:28px;height:28px}
+@keyframes wa-pulse{0%,100%{box-shadow:0 8px 24px rgba(18,167,106,.4)}50%{box-shadow:0 8px 32px rgba(18,167,106,.6),0 0 0 9px rgba(18,167,106,.10)}}
+
+/* ─── ANIM ─── */
+.fade{opacity:0;transform:translateY(20px);transition:opacity .6s ease,transform .6s ease}
+.fade.show{opacity:1;transform:none}
+
+/* ─── DESKTOP ─── */
+@media(min-width:768px){
+  nav{padding:1.1rem 3rem}
+  .sec{padding:5.5rem 3rem}
+  .hero{padding:7rem 3rem 4rem}
+  .about{display:grid;grid-template-columns:1.1fr 1fr;gap:3.5rem;align-items:center;text-align:left}
+  .about-photos-col .about-photo{aspect-ratio:4/3}
+  .pilares-grid{grid-template-columns:repeat(3,1fr)}
+  .edu-grid{grid-template-columns:repeat(3,1fr)}
+  .steps{grid-template-columns:repeat(2,1fr)}
+  .pep-grid{grid-template-columns:repeat(3,1fr)}
+  .hero-btns{flex-direction:row;max-width:none;justify-content:center}
+  .c-blocks{flex-direction:row;max-width:none;justify-content:center}
+  .c-block{flex:1;max-width:230px}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#inicio" class="nav-logo">Medical <b>Fitness</b> Nutrition<small>Dra. Jeremy Moreno</small></a>
+  <a class="nav-cta" href="https://wa.me/50769836478?text=Hola%20Dra.%20Moreno%2C%20quiero%20agendar%20una%20consulta." target="_blank" rel="noopener">Agendar</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="inicio">
+  <div class="fade">
+    <div class="hero-photo-wrap">
+      <img class="hero-photo" src="images/doctora-hero.jpg" alt="Dra. Jeremy Moreno">
+      <div class="hero-badge">
+        <div class="badge-name">Dra. Jeremy Moreno</div>
+        <div class="badge-role">Medicina Deportiva</div>
+      </div>
+    </div>
+    <span class="eyebrow">Medicina Deportiva de Precisión · Panamá</span>
+    <h1>Optimiza tu salud<br>con <em>respaldo científico</em></h1>
+    <div class="divider"></div>
+    <p class="hero-sub">Protocolos personalizados de composición corporal, optimización hormonal y nutrición inteligente — diseñados y supervisados por la Dra. Jeremy Moreno. No vendemos productos: acompañamos resultados respaldados por evidencia.</p>
+    <div class="hero-btns">
+      <a class="btn btn-p" href="https://wa.me/50769836478?text=Hola%20Dra.%20Moreno%2C%20quiero%20agendar%20una%20consulta." target="_blank" rel="noopener">Agenda tu consulta</a>
+      <a class="btn btn-o" href="#guia">Ver guía de péptidos</a>
+    </div>
+    <div class="hero-stats">
+      <div class="hstat"><div class="n">20</div><div class="l">Péptidos</div></div>
+      <div class="hstat"><div class="n">9</div><div class="l">Categorías</div></div>
+      <div class="hstat"><div class="n">100%</div><div class="l">Supervisión médica</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- QUOTE -->
+<div class="quote">
+  <p class="fade">"No vendemos péptidos. Acompañamos resultados respaldados por ciencia, con criterio médico en cada paso."</p>
+  <p class="attr fade">— Dra. Jeremy Moreno</p>
+</div>
+
+<!-- ABOUT -->
+<section class="sec" id="doctora">
+  <div class="wrap about">
+    <div class="about-photos-col fade">
+      <div class="about-photo"><img src="images/doctora-about.jpg" alt="Dra. Jeremy Moreno"></div>
+    </div>
+    <div class="fade">
+      <span class="eyebrow">La especialista</span>
+      <h2 class="sec-title">Dra. Jeremy Moreno</h2>
+      <div class="divider" style="margin:1rem 0 0"></div>
+      <p class="sec-lead">Especialista en Medicina Deportiva y Nutrición Personalizada, con amplia experiencia en rehabilitación de lesiones, optimización del rendimiento físico y medicina integrativa. Con base en PowerClub Brisas del Golf, Panamá — un enfoque médico riguroso que combina ciencia avanzada con atención personalizada a cada paciente.</p>
+      <div class="creds">
+        <div class="cred"><div class="cred-ic"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9V6a2 2 0 0 1 2-2h2M18 9V6a2 2 0 0 0-2-2h-2M6 15v3a2 2 0 0 0 2 2h2M18 15v3a2 2 0 0 1-2 2h-2"/><rect x="2" y="10" width="4" height="4" rx="1"/><rect x="18" y="10" width="4" height="4" rx="1"/><line x1="6" y1="12" x2="18" y2="12"/></svg></div></div><div><h4>Medicina Deportiva</h4><p>Optimización del rendimiento y composición corporal.</p></div></div>
+        <div class="cred"><div class="cred-ic"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 3-6.7"/><polyline points="3 4 3 9 8 9"/></svg></div></div><div><h4>Rehabilitación e Hipertrofia</h4><p>Recuperación de lesiones y desarrollo muscular con base clínica.</p></div></div>
+        <div class="cred"><div class="cred-ic"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2C9 6 7 9.5 7 13a5 5 0 0 0 10 0c0-3.5-2-7-5-11z"/><path d="M9.5 14.5c0 1.5 1 2.5 2.5 2.5"/></svg></div></div><div><h4>Nutrición Personalizada</h4><p>Planes ajustados a tu metabolismo y objetivos.</p></div></div>
+        <div class="cred"><div class="cred-ic"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l8 4v6c0 5-3.4 8.4-8 10-4.6-1.6-8-5-8-10V6l8-4z"/><path d="M9 12l2 2 4-4"/></svg></div></div><div><h4>Entrenamiento con Respaldo Médico</h4><p>Protocolos supervisados, seguros y monitoreados.</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PILARES -->
+<section class="sec sec-gray" id="pilares">
+  <div class="wrap">
+    <div class="sec-head fade">
+      <span class="eyebrow">Nuestro enfoque</span>
+      <h2 class="sec-title">Los pilares de la marca</h2>
+      <p class="sec-lead">Seis principios que guían cada protocolo — sin modas, sin atajos.</p>
+    </div>
+    <div class="pilares-grid">
+      <div class="pilar fade"><div class="pilar-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3h6M10 3v5.5L5.5 17a2 2 0 0 0 1.8 3h9.4a2 2 0 0 0 1.8-3L14 8.5V3"/><line x1="8.5" y1="13" x2="15.5" y2="13"/></svg></div><h4>Medicina basada en evidencia</h4><p>Nada de modas. Todo respaldado científicamente.</p></div>
+      <div class="pilar fade"><div class="pilar-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 17 9 11 13 15 21 6"/><polyline points="15 6 21 6 21 12"/></svg></div><h4>Transformación física</h4><p>No solo perder peso: mejor composición corporal.</p></div>
+      <div class="pilar fade"><div class="pilar-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3.2"/></svg></div><h4>Optimización hormonal</h4><p>Siempre desde un enfoque médico y personalizado.</p></div>
+      <div class="pilar fade"><div class="pilar-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2c3 4 5 7.5 5 11a5 5 0 0 1-10 0c0-3.5 2-7 5-11z"/></svg></div><h4>Nutrición inteligente</h4><p>No dietas extremas: hábitos sostenibles.</p></div>
+      <div class="pilar fade"><div class="pilar-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6.5 6.5l3 3M14.5 14.5l3 3M17.5 6.5l-3 3M9.5 14.5l-3 3"/><rect x="3" y="3" width="4" height="4" rx="1"/><rect x="17" y="3" width="4" height="4" rx="1"/><rect x="3" y="17" width="4" height="4" rx="1"/><rect x="17" y="17" width="4" height="4" rx="1"/></svg></div><h4>Entrenamiento</h4><p>La medicina no reemplaza el ejercicio: lo potencia.</p></div>
+      <div class="pilar fade"><div class="pilar-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4.5 8-11.5A8 8 0 0 0 4 10.5C4 17.5 12 22 12 22z"/><path d="M12 8v5l3 2"/></svg></div><h4>Longevidad</h4><p>Vivir más, pero sobre todo vivir mejor.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- EDU -->
+<section class="sec" id="que-son">
+  <div class="wrap">
+    <div class="sec-head fade">
+      <span class="eyebrow">Educación</span>
+      <h2 class="sec-title">¿Qué son los péptidos?</h2>
+      <p class="sec-lead">Cadenas cortas de aminoácidos que actúan como mensajeros biológicos. A diferencia de los esteroides, trabajan en armonía con los sistemas naturales del cuerpo.</p>
+    </div>
+    <div class="edu-grid">
+      <div class="edu-card fade"><div class="edu-num">01</div><h4>Mensajeros biológicos</h4><p>Activan mecanismos de reparación, regeneración y optimización hormonal de forma dirigida.</p></div>
+      <div class="edu-card fade"><div class="edu-num">02</div><h4>Control metabólico</h4><p>Apoyan el equilibrio energético, la quema de grasa y la sensibilidad a la insulina.</p></div>
+      <div class="edu-card fade"><div class="edu-num">03</div><h4>Siempre supervisados</h4><p>Cada protocolo se indica, dosifica y monitorea bajo criterio médico de la Dra. Moreno.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="sec sec-gray" id="proceso">
+  <div class="wrap">
+    <div class="sec-head fade">
+      <span class="eyebrow">Cómo funciona</span>
+      <h2 class="sec-title">Consulta &amp; seguimiento</h2>
+      <p class="sec-lead">Un proceso médico claro, de principio a fin. Nada de automedicación: todo arranca con una evaluación.</p>
+    </div>
+    <div class="steps">
+      <div class="step fade"><h4>Agenda tu consulta</h4><p>Escríbenos por WhatsApp y reserva tu evaluación inicial con la Dra. Moreno.</p></div>
+      <div class="step fade"><h4>Evaluación médica</h4><p>Revisamos tus objetivos, historial y exámenes para definir el enfoque adecuado para ti.</p></div>
+      <div class="step fade"><h4>Protocolo personalizado</h4><p>Recibes un plan a tu medida — solo lo que tu caso necesita, explicado en términos claros.</p></div>
+      <div class="step fade"><h4>Seguimiento continuo</h4><p>Monitoreamos avances con controles y ajustamos el plan. ¿Ya eres paciente? Escríbenos para tu cita de seguimiento.</p></div>
+    </div>
+    <div style="text-align:center;margin-top:2.4rem" class="fade">
+      <a class="btn btn-p" style="display:inline-flex" href="https://wa.me/50769836478?text=Hola%20Dra.%20Moreno%2C%20soy%20paciente%20y%20quiero%20agendar%20mi%20seguimiento." target="_blank" rel="noopener">Soy paciente · agendar seguimiento</a>
+    </div>
+  </div>
+</section>
+
+<!-- GUIDE -->
+<section class="sec" id="guia">
+  <div class="wrap">
+    <div class="sec-head fade">
+      <span class="eyebrow">Guía de referencia</span>
+      <h2 class="sec-title">Catálogo de péptidos</h2>
+      <p class="sec-lead">20 péptidos de última generación, organizados por objetivo. ¿Te interesa alguno? Pregunta por su indicación y disponibilidad por WhatsApp — el protocolo se confirma en consulta directa con la doctora.</p>
+    </div>
+
+    <!-- PÉRDIDA DE PESO -->
+    <div class="cat-block">
+      <div class="cat-label fade"><h3>Pérdida de peso</h3><span class="bar"></span></div>
+      <div class="pep-grid">
+        <div class="pep fade"><div class="pep-top"><span class="pep-num">01</span><span class="pep-cat">Pérdida de peso</span></div><h4>Retatrutide</h4><div class="alias">Triple agonista GLP-1 + GIP + Glucagón</div><div class="desc">Maximiza la quema de grasa y mejora la resistencia a la insulina.</div><div class="vis"><b>Efectos visibles:</b> pérdida de peso acelerada, reducción de cintura, mejora en textura de piel.</div><div class="foot"><span class="pep-note">Protocolo en consulta</span><a class="pep-wa" href="https://wa.me/50769836478?text=Hola%20Dra.%20Moreno%2C%20me%20interesa%20Retatrutide.%20%C2%BFPodemos%20conversarlo%20en%20consulta%3F" target="_blank" rel="noopener">Consultar</a></div></div>
+        <div class="pep fade"><div class="pep-top"><span class="pep-num">02</span><span class="pep-cat">Pérdida de peso</span></div><h4>Semaglutide</h4><div class="alias">Estándar de oro para control de apetito</div><div class="desc">Regula el azúcar en sangre y suprime potentemente el apetito ("food noise").</div><div class="vis"><b>Efectos visibles:</b> reducción constante de peso y menos ansiedad por comer.</div><div class="foot"><span class="pep-note">Protocolo en consulta</span><a class="pep-wa" href="https://wa.me/50769836478?text=Hola%20Dra.%20Moreno%2C%20me%20interesa%20Semaglutide.%20%C2%BFPodemos%20conversarlo%20en%20consulta%3F" target="_blank" rel="noopener">Consultar</a></div></div>
+        <div class="pep fade"><div class="pep-top"><span class="pep-num">03</span><span class="pep-cat">Pérdida de peso</span></div><h4>Tirzepatide</h4><div class="alias">Doble agonista GLP-1 + GIP</div><div class="desc">Menor malestar gastrointestinal que Semaglutide y mayor eficacia en pérdida de grasa.</div><div class="vis"><b>Efectos visibles:</b> transformación corporal rápida conservando mejor la masa muscular.</div><div class="foot"><span class="pep-note">Protocolo en consulta</span><a class="pep-wa" href="https://wa.me/50769836478?text=Hola%20Dra.%20Moreno%2C%20me%20interesa%20Tirzepatide.%20%C2%BFPodemos%20conversarlo%20en%20consulta%3F" target="_blank" rel="noopener">Consultar</a></div></div>
+      </div>
+    </div>
+
+    <!-- ANTI-ENVEJECIMIENTO -->
+    <div class="cat-block">
+      <div class="cat-label fade"><h3>Anti-envejecimiento</h3><span class="bar"></span></div>
+      <div class="pep-grid">
+        <div class="pep fade"><div class="pep-top"><span class="pep-num">04</span><span class="pep-cat">Anti-edad</span></div><h4>GHK-Cu</h4><div class="alias">Péptido de Cobre</div><div class="desc">Producción de colágeno y elastina, reparación de ADN y acción antiinflamatoria.</div><div class="vis"><b>Efectos visibles:</b> piel más firme, menos arrugas, crecimiento de cabello, cicatrización.</div><div class="foot"><span class="pep-note">Protocolo en consulta</span><a class="pep-wa" href="https://wa.me/50769836478?text=Hola%20Dra.%20Moreno%2C%20me%20interesa%20GHK-Cu.%20%C2%BFPodemos%20conversarlo%20en%20consulta%3F" target="_blank" rel="noopener">Consultar</a></div></div>
+        <div class="pep fade"><div class="pep-top"><span class="pep-num">07</span><span class="pep-cat">Anti-edad</span></div><h4>NAD+</h4><div class="alias">Coenzima de la longevidad celular</div><div class="desc">Energía (ATP), reparación de ADN y activación de sirtuinas (genes de longevidad).</div><div class="vis"><b>Efectos visibles:</b> claridad mental, mayor resistencia física, piel más juvenil.</div><div class="foot"><span class="pep-note">Protocolo en consulta</span><a class="pep-wa" href="https://wa.me/50769836478?text=Hola%20Dra.%20Moreno%2C%20me%20interesa%20NAD%2B.%20%C2%BFPodemos%20conversarlo%20en%20consulta%3F" target="_blank" rel="noopener">Consultar</a></div></div>
+        <div class="pep fade"><div class="pep-top"><span class="pep-num">10</span><span class="pep-cat">Anti-edad</span></div><h4>Epitalon</h4><div class="alias">Epithalon</div><div class="desc">Activa la telomerasa para alargar los telómeros del ADN y regula la glándula pineal.</div><div class="vis"><b>Efectos visibles:</b> mejora profunda del sueño, rejuvenecimiento de piel y cabello.</div><div class="foot"><span class="pep-note">Protocolo en consulta</span><a class="pep-wa" href="https://wa.me/50769836478?text=Hola%20Dra.%20Moreno%2C%20me%20interesa%20Epitalon.%20%C2%BFPodemos%20conversarlo%20en%20consulta%3F" target="_blank" rel="noopener">Consultar</a></div></div>
+      </div>
+    </div>
+
+    <!-- RECUPERACIÓN -->
+    <div class="cat-block">
+      <div class="cat-label fade"><h3>Recuperación</h3><span class="bar"></span></div>
+      <div class="pep-grid">
+        <div class="pep fade"><div class="pep-top"><span class="pep-num">05</span><span class="pep-cat">Recuperación</span></div><h4>BPC-157</h4><div class="alias">Body Protection Compound</div><div class="desc">Repara tendones, ligamentos, músculo y salud intestinal (úlceras, leaky gut).</div><div class="vis"><b>Efectos visibles:</b> desinflamación de articulaciones y movilidad recuperada.</div><div class="foot"><span class="pep-note">Protocolo en consulta</span><a class="pep-wa" href="https://wa.me/50769836478?text=Hola%20Dra.%20Moreno%2C%20me%20interesa%20BPC-157.%20%C2%BFPodemos%20conversarlo%20en%20consulta%3F" target="_blank" rel="noopener">Consultar</a></div></div>
+        <div class="pep fade"><div class="pep-top"><span class="pep-num">20</span><span class="pep-cat">Recuperación</span></div><h4>TB-500</h4><div class="alias">Timosina Beta-4</div><div class="desc">Reparación sistémica total, mejora la flexibilidad y reduce la inflamación crónica.</div><div class="vis"><b>Efectos visibles:</b> movilidad mejorada, curación rápida de heridas o desgarros.</div><div class="foot"><span class="pep-note">Protocolo en consulta</span><a class="pep-wa" href="https://wa.me/50769836478?text=Hola%20Dra.%20Moreno%2C%20me%20interesa%20TB-500.%20%C2%BFPodemos%20conversarlo%20en%20consulta%3F" target="_blank" rel="noopener">Consultar</a></div></div>
+      </div>
+    </div>
+
+    <!-- BLEND / COMBO -->
+    <div class="cat-block">
+      <div class="cat-label fade"><h3>Blend / Combo</h3><span class="bar"></span></div>
+      <div class="pep-grid">
+        <div class="pep fade"><div class="pep-top"><span class="pep-num">06</span><span class="pep-cat">Blend</span></div><h4>Wolverine Blend</h4><div class="alias">TB-500 + BPC-157</div><div class="desc">Combina la reparación sistémica del TB-500 con la reparación localizada del BPC-157.</div><div class="vis"><b>Efectos visibles:</b> recuperación de cirugías o desgarros en tiempo récord.</div><div class="foot"><span class="pep-note">Protocolo en consulta</span><a class="pep-wa" href="https://wa.me/50769836478?text=Hola%20Dra.%20Moreno%2C%20me%20interesa%20el%20Wolverine%20Blend.%20%C2%BFPodemos%20conversarlo%20en%20consulta%3F" target="_blank" rel="noopener">Consultar</a></div></div>
+      </div>
+    </div>
+
+    <!-- NOOTRÓPICO / MENTAL -->
+    <div class="cat-block">
+      <div class="cat-label fade"><h3>Nootrópico / Mental</h3><span class="bar"></span></div>
+      <div class="pep-grid">
+        <div class="pep fade"><div class="pep-top"><span class="pep-num">08</span><span class="pep-cat">Mental</span></div><h4>Semax</h4><div class="alias">Nootrópico ruso</div><div class="desc">Mejora la memoria, la atención y protege el cerebro de la hipoxia.</div><div class="vis"><b>Efectos visibles:</b> enfoque agudo, mejor estado de ánimo y aprendizaje.</div><div class="foot"><span class="pep-note">Protocolo en consulta</span><a class="pep-wa" href="https://wa.me/50769836478?text=Hola%20Dra.%20Moreno%2C%20me%20interesa%20Semax.%20%C2%BFPodemos%20conversarlo%20en%20consulta%3F" target="_blank" rel="noopener">Consultar</a></div></div>
+        <div class="pep fade"><div class="pep-top"><span class="pep-num">09</span><span class="pep-cat">Mental</span></div><h4>Selank</h4><div class="alias">Ansiolítico peptídico</div><div class="desc">Reduce la ansiedad y el estrés sin causar sedación ni somnolencia.</div><div class="vis"><b>Efectos visibles:</b> calma emocional, mejor manejo del estrés, menos fatiga mental.</div><div class="foot"><span class="pep-note">Protocolo en consulta</span><a class="pep-wa" href="https://wa.me/50769836478?text=Hola%20Dra.%20Moreno%2C%20me%20interesa%20Selank.%20%C2%BFPodemos%20conversarlo%20en%20consulta%3F" target="_blank" rel="noopener">Consultar</a></div></div>
+      </div>
+    </div>
+
+    <!-- HORMONAL / LIBIDO -->
+    <div class="cat-block">
+      <div class="cat-label fade"><h3>Hormonal / Libido</h3><span class="bar"></span></div>
+      <div class="pep-grid">
+        <div class="pep fade"><div class="pep-top"><span class="pep-num">11</span><span class="pep-cat">Hormonal</span></div><h4>PT-141</h4><div class="alias">Bremelanotide</div><div class="desc">Actúa en el sistema nervioso central. Aumenta la libido y el deseo sexual.</div><div class="vis"><b>Efectos visibles:</b> aumento significativo de la libido.</div><div class="foot"><span class="pep-note">Protocolo en consulta</span><a class="pep-wa" href="https://wa.me/50769836478?text=Hola%20Dra.%20Moreno%2C%20me%20interesa%20PT-141.%20%C2%BFPodemos%20conversarlo%20en%20consulta%3F" target="_blank" rel="noopener">Consultar</a></div></div>
+        <div class="pep fade"><div class="pep-top"><span class="pep-num">13</span><span class="pep-cat">Hormonal</span></div><h4>Melanotan II</h4><div class="alias">Melanina &amp; Libido</div><div class="desc">Estimula la producción de melanina. Actúa como supresor de apetito y potenciador de libido.</div><div class="vis"><b>Efectos visibles:</b> bronceado oscuro sin exposición solar prolongada.</div><div class="foot"><span class="pep-note">Protocolo en consulta</span><a class="pep-wa" href="https://wa.me/50769836478?text=Hola%20Dra.%20Moreno%2C%20me%20interesa%20Melanotan%20II.%20%C2%BFPodemos%20conversarlo%20en%20consulta%3F" target="_blank" rel="noopener">Consultar</a></div></div>
+        <div class="pep fade"><div class="pep-top"><span class="pep-num">18</span><span class="pep-cat">Hormonal</span></div><h4>Kisspeptin-10</h4><div class="alias">Estimulador hormonal</div><div class="desc">Estimula la producción natural de testosterona y fertilidad. No suprime el eje hormonal.</div><div class="vis"><b>Efectos visibles:</b> aumento de libido y bienestar general.</div><div class="foot"><span class="pep-note">Protocolo en consulta</span><a class="pep-wa" href="https://wa.me/50769836478?text=Hola%20Dra.%20Moreno%2C%20me%20interesa%20Kisspeptin-10.%20%C2%BFPodemos%20conversarlo%20en%20consulta%3F" target="_blank" rel="noopener">Consultar</a></div></div>
+      </div>
+    </div>
+
+    <!-- COMPOSICIÓN CORPORAL -->
+    <div class="cat-block">
+      <div class="cat-label fade"><h3>Composición corporal</h3><span class="bar"></span></div>
+      <div class="pep-grid">
+        <div class="pep fade"><div class="pep-top"><span class="pep-num">14</span><span class="pep-cat">Composición</span></div><h4>MOTS-c</h4><div class="alias">Péptido del ejercicio</div><div class="desc">Regula el metabolismo energético y mejora la función mitocondrial.</div><div class="vis"><b>Efectos visibles:</b> mayor resistencia al ejercicio, reducción de grasa rebelde.</div><div class="foot"><span class="pep-note">Protocolo en consulta</span><a class="pep-wa" href="https://wa.me/50769836478?text=Hola%20Dra.%20Moreno%2C%20me%20interesa%20MOTS-c.%20%C2%BFPodemos%20conversarlo%20en%20consulta%3F" target="_blank" rel="noopener">Consultar</a></div></div>
+        <div class="pep fade"><div class="pep-top"><span class="pep-num">15</span><span class="pep-cat">Composición</span></div><h4>Tesamorelin</h4><div class="alias">Secretagogo de GH</div><div class="desc">Específicamente eficaz contra la grasa visceral abdominal.</div><div class="vis"><b>Efectos visibles:</b> abdomen más plano y mejor definición muscular.</div><div class="foot"><span class="pep-note">Protocolo en consulta</span><a class="pep-wa" href="https://wa.me/50769836478?text=Hola%20Dra.%20Moreno%2C%20me%20interesa%20Tesamorelin.%20%C2%BFPodemos%20conversarlo%20en%20consulta%3F" target="_blank" rel="noopener">Consultar</a></div></div>
+        <div class="pep fade"><div class="pep-top"><span class="pep-num">16</span><span class="pep-cat">Composición</span></div><h4>CJC-1295</h4><div class="alias">Análogo GHRH de acción prolongada</div><div class="desc">Aumenta masa muscular, quema grasa y mejora la recuperación.</div><div class="vis"><b>Efectos visibles:</b> mejor tono muscular, piel más tersa y mejor descanso.</div><div class="foot"><span class="pep-note">Protocolo en consulta</span><a class="pep-wa" href="https://wa.me/50769836478?text=Hola%20Dra.%20Moreno%2C%20me%20interesa%20CJC-1295.%20%C2%BFPodemos%20conversarlo%20en%20consulta%3F" target="_blank" rel="noopener">Consultar</a></div></div>
+        <div class="pep fade"><div class="pep-top"><span class="pep-num">19</span><span class="pep-cat">Composición</span></div><h4>IGF-1</h4><div class="alias">Factor de Crecimiento Insulínico</div><div class="desc">Crecimiento de tejido muscular nuevo (hiperplasia) y quema de grasa.</div><div class="vis"><b>Efectos visibles:</b> ganancia de músculo magro y recuperación extrema.</div><div class="foot"><span class="pep-note">Protocolo en consulta</span><a class="pep-wa" href="https://wa.me/50769836478?text=Hola%20Dra.%20Moreno%2C%20me%20interesa%20IGF-1.%20%C2%BFPodemos%20conversarlo%20en%20consulta%3F" target="_blank" rel="noopener">Consultar</a></div></div>
+      </div>
+    </div>
+
+    <!-- INMUNIDAD -->
+    <div class="cat-block">
+      <div class="cat-label fade"><h3>Inmunidad</h3><span class="bar"></span></div>
+      <div class="pep-grid">
+        <div class="pep fade"><div class="pep-top"><span class="pep-num">17</span><span class="pep-cat">Inmunidad</span></div><h4>Thymosin Alpha-1</h4><div class="alias">Modulador inmune</div><div class="desc">Modulador inmunitario potente. Combate infecciones y virus, fortalece las defensas.</div><div class="vis"><b>Efectos visibles:</b> menos enfermedades virales, recuperación acelerada.</div><div class="foot"><span class="pep-note">Protocolo en consulta</span><a class="pep-wa" href="https://wa.me/50769836478?text=Hola%20Dra.%20Moreno%2C%20me%20interesa%20Thymosin%20Alpha-1.%20%C2%BFPodemos%20conversarlo%20en%20consulta%3F" target="_blank" rel="noopener">Consultar</a></div></div>
+      </div>
+    </div>
+
+    <!-- SUEÑO / ENERGÍA -->
+    <div class="cat-block">
+      <div class="cat-label fade"><h3>Sueño / Energía</h3><span class="bar"></span></div>
+      <div class="pep-grid">
+        <div class="pep fade"><div class="pep-top"><span class="pep-num">12</span><span class="pep-cat">Sueño</span></div><h4>DSIP</h4><div class="alias">Péptido inductor del sueño profundo</div><div class="desc">Mejora la fase de sueño profundo y regula la respuesta al estrés.</div><div class="vis"><b>Efectos visibles:</b> despertar descansado, reducción de fatiga crónica.</div><div class="foot"><span class="pep-note">Protocolo en consulta</span><a class="pep-wa" href="https://wa.me/50769836478?text=Hola%20Dra.%20Moreno%2C%20me%20interesa%20DSIP.%20%C2%BFPodemos%20conversarlo%20en%20consulta%3F" target="_blank" rel="noopener">Consultar</a></div></div>
+      </div>
+    </div>
+
+    <div class="disc fade">
+      <p><b>⚠ Aviso médico:</b> Este catálogo es una guía de referencia educativa. La administración de cualquier péptido debe ser indicada y supervisada por un profesional de la salud calificado. No mostramos precios ni vendemos en línea: cada protocolo, dosis y disponibilidad se confirma únicamente en <b>consulta directa con la Dra. Moreno</b>. La automedicación puede ser peligrosa.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contacto">
+  <span class="eyebrow">Agenda tu evaluación</span>
+  <h2 class="sec-title">Hablemos por WhatsApp</h2>
+  <div class="divider" style="background:var(--turq)"></div>
+  <p class="sec-lead" style="max-width:480px;margin:0 auto">Atención personalizada bajo previa cita. Escríbenos y da el primer paso.</p>
+  <div class="c-blocks">
+    <a class="c-block fade" href="https://wa.me/50769836478?text=Hola%20Dra.%20Moreno%2C%20quiero%20agendar%20una%20consulta." target="_blank" rel="noopener">
+      <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg></div>
+      <div class="lab">WhatsApp</div><div class="val">+507 6983-6478</div><div class="sub">Toca para escribir</div>
+    </a>
+    <a class="c-block fade" href="https://www.instagram.com/medicalfitnessnutrition" target="_blank" rel="noopener">
+      <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="3.6"/><circle cx="17.2" cy="6.8" r="0.6" fill="currentColor" stroke="none"/></svg></div>
+      <div class="lab">Instagram</div><div class="val">@medicalfitnessnutrition</div><div class="sub">Síguenos</div>
+    </a>
+    <a class="c-block fade" href="https://www.google.com/maps/search/PowerClub+Brisas+del+Golf+Panama" target="_blank" rel="noopener">
+      <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-6.4 7-12a7 7 0 0 0-14 0c0 5.6 7 12 7 12z"/><circle cx="12" cy="9" r="2.4"/></svg></div>
+      <div class="lab">Ubicación</div><div class="val">Brisas del Golf</div><div class="sub">PowerClub · Panamá</div>
+    </a>
+  </div>
+  <p class="c-note fade">★ Atención exclusivamente bajo previa cita</p>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="foot-logo">Medical Fitness Nutrition</div>
+  <p>Dra. Jeremy Moreno · Medicina Deportiva &amp; Nutrición · Panamá</p>
+  <p style="margin-top:0.5rem;opacity:.6">Uso médico exclusivo · © 2026 Medical Fitness Nutrition</p>
+</footer>
+
+<!-- WHATSAPP FLOAT -->
+<a class="wa-float" href="https://wa.me/50769836478?text=Hola%20Dra.%20Moreno%2C%20quiero%20agendar%20una%20consulta." target="_blank" rel="noopener" title="WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21h.005c5.46 0 9.9-4.45 9.9-9.91 0-2.65-1.03-5.14-2.9-7.01A9.87 9.87 0 0 0 12.04 2zm0 18.12h-.004a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.22 8.22 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.25-8.24 2.2 0 4.27.86 5.83 2.42a8.18 8.18 0 0 1 2.41 5.83c0 4.55-3.7 8.24-8.25 8.24zm4.52-6.17c-.25-.12-1.47-.72-1.7-.81-.23-.08-.39-.12-.56.13-.17.25-.64.81-.78.97-.14.17-.29.19-.54.06-.25-.12-1.04-.38-1.99-1.22-.73-.66-1.23-1.46-1.37-1.71-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.12-.14.16-.25.25-.41.08-.17.04-.31-.02-.44-.06-.12-.56-1.35-.77-1.85-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.44.06-.67.31s-.88.86-.88 2.1.9 2.44 1.02 2.6c.12.17 1.77 2.7 4.29 3.79.6.26 1.07.41 1.43.53.6.19 1.15.16 1.58.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.08.14-1.18-.06-.11-.23-.17-.48-.29z"/></svg>
+</a>
+
+<script>
+const io = new IntersectionObserver(
+  entries => entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('show') }),
+  {threshold:0.08, rootMargin:'0px 0px -30px 0px'}
+);
+document.querySelectorAll('.fade').forEach(el => io.observe(el));
+
+window.addEventListener('scroll', () => {
+  document.querySelector('nav').style.boxShadow =
+    scrollY > 60 ? '0 3px 16px rgba(14,58,91,.08)' : 'none';
+}, {passive:true});
+</script>
+</body>
+</html>
